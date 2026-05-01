@@ -1,0 +1,70 @@
+%% Chapter/chapter2.tex
+%% บทที่ 2 - เอกสารและงานวิจัยที่เกี่ยวข้อง
+
+\chapter{เอกสารและงานวิจัยที่เกี่ยวข้อง}
+% (English: Related Documents and Research)
+
+\section{กล่าวนำ}
+% (Introduction)
+
+\noindent\hspace{\parindent}
+กล่าวนำถึงเนื้อหาที่จะนำเสนอในบทนี้ โดยอธิบายภาพรวมของทฤษฎีและงานวิจัยที่เกี่ยวข้อง
+
+%%------------------------------------------------------------------
+\section{ชื่อหัวข้อทฤษฎีหลักที่ 1}
+% ตัวอย่าง: ทฤษฎีระบบควบคุม
+
+\noindent\hspace{\parindent}
+อธิบายทฤษฎีหรือเนื้อหาพื้นฐานที่เกี่ยวข้องกับงานวิจัย พร้อมสมการหรือแผนภาพที่เกี่ยวข้อง
+ตัวอย่างสมการ:
+
+\begin{equation}
+  G(s) = \frac{1}{1 + sT}
+  \label{eq:tf_example}
+\end{equation}
+
+โดยที่ $T$ คือ ค่าคงที่เวลา (วินาที)
+
+%%------------------------------------------------------------------
+\subsection{ชื่อหัวข้อย่อย}
+
+\noindent\hspace{\parindent}%
+อธิบายเนื้อหาย่อยที่ 1
+
+% ตัวอย่างการแสดงภาพประกอบ — ใส่ไฟล์ภาพจริงของคุณใน Figure/ แล้ว uncomment:
+%
+ \begin{figure}[htbp]
+   \centering
+   \includegraphics[width=0.2\textwidth]{Figure/logo.png}
+   \caption{[คำอธิบายภาพประกอบ]}
+   \label{fig:example}
+ \end{figure}
+
+%%------------------------------------------------------------------
+\subsection{ชื่อหัวข้อย่อย}
+
+\noindent\hspace{\parindent}%
+อธิบายเนื้อหาย่อยที่ 2
+
+%%------------------------------------------------------------------
+\section{ชื่อหัวข้อทฤษฎีหลัก}
+
+\noindent\hspace{\parindent}%
+[อธิบายทฤษฎีหรือวิธีการที่ใช้ในงานวิจัย]
+
+ตัวอย่างสมการที่ซับซ้อนขึ้น:
+\begin{equation}
+  u(t) = K_p e(t) + K_i \int_0^t e(\tau)\,d\tau + K_d \frac{de(t)}{dt} + K_{dd} \frac{d^2e(t)}{dt^2}
+  \label{eq:pidd}
+\end{equation}
+
+โดยที่
+\begin{itemize}
+  \item $K_p$ คือ อัตราขยาย (Proportional Gain)
+  \item $K_i$ คือ อัตราขยายปริพันธ์ (Integral Gain)
+  \item $K_d$ คือ อัตราขยายอนุพันธ์ (Derivative Gain)
+  \item $K_{dd}$ คือ อัตราขยายอนุพันธ์อันดับสอง (Double Derivative Gain)
+\end{itemize}
+
+%%------------------------------------------------------------------
+\section{งานวิจัยที่เกี่ยวข้อง}

@@ -1,0 +1,59 @@
+%% Compiler: XeLaTeX only
+%% Compile: xelatex → bibtex → xelatex → xelatex
+
+\documentclass[thai,doctor]{Style/msu_thesis}
+%\documentclass[english,doctor]{Style/msu_thesis}
+\usepackage{Style/msu_thesis}
+
+
+%% ============================================================
+%%  โหลดไฟล์ config (กรอกข้อมูลทั้งหมดในไฟล์ config.tex)
+%% ============================================================
+\input{config}
+%% ============================================================
+\begin{document}
+%% ============================================================
+
+%% ---------- FRONT MATTER ----------
+\frontmatter
+\pagestyle{frontmatter}
+
+\makecover
+\makeapproval
+\makeabstract
+\makeacknowledgement
+
+\begingroup
+\makeatletter
+%\def\@starttoc#1{\input{\jobname.#1}}
+\maketablesofcontents
+\endgroup
+
+\clearpage
+\makelistoftables                  %% สารบัญตาราง
+
+\clearpage
+\makelistoffigures                 %% สารบัญภาพ
+
+%% ---------- MAIN MATTER ----------
+\mainmatter
+\pagestyle{fancy}
+
+\input{Chapter/chapter1}
+\input{Chapter/chapter2}
+\input{Chapter/chapter3}
+\input{Chapter/chapter4}
+\input{Chapter/chapter5}
+
+%% ---------- BIBLIOGRAPHY ----------
+\clearpage
+\addcontentsline{toc}{chapter}{บรรณานุกรม}
+\bibliography{ref}
+
+%% ---------- BACK MATTER ----------
+\backmatter
+
+%\input{Cover/biography}        %% ประวัติผู้เขียน
+\makebio
+
+\end{document}

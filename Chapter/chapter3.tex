@@ -1,0 +1,100 @@
+%% Chapter/chapter3.tex
+%% บทที่ 3 - วิธีการดำเนินการ
+
+\chapter{วิธีการดำเนินการ}
+% (English: Methodology)
+
+\noindent\hspace{\parindent}%
+[กล่าวนำถึงวิธีการดำเนินการวิจัย อธิบายภาพรวมของระบบหรือแบบจำลองที่ใช้ในการวิจัย]
+
+%%------------------------------------------------------------------
+\section{แบบจำลองหรือระบบ}
+
+\noindent\hspace{\parindent}%
+[อธิบายแบบจำลองหรือระบบที่ใช้ในการวิจัย รวมถึงค่าพารามิเตอร์ต่าง ๆ]
+
+ตัวอย่างตาราง:
+\begin{table}[htbp]
+  \centering
+  \caption{ชื่อตาราง: ค่าพารามิเตอร์ของระบบ}
+  \label{tab:parameters}
+  \begin{tabular}{c|l|c|c}
+    \toprule
+    สัญลักษณ์ & คำอธิบาย & ค่า & หน่วย \\
+    \midrule
+    $T_G$   & ค่าคงที่เวลาของ Governor     & 0.08  & วินาที \\
+    $T_T$   & ค่าคงที่เวลาของ Turbine      & 0.30  & วินาที \\
+    $T_R$   & ค่าคงที่เวลาของ Reheat       & 10.0  & วินาที \\
+    $K_R$   & อัตราขยายของ Reheat          & 0.5   & -- \\
+    $K_P$   & อัตราขยายของระบบกำลัง        & 120   & Hz/p.u. \\
+    $T_P$   & ค่าคงที่เวลาของระบบกำลัง     & 20.0  & วินาที \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+
+%%------------------------------------------------------------------
+\section{ขอบเขตการค้นหาพารามิเตอร์}
+
+\noindent\hspace{\parindent}%
+[อธิบายขอบเขตของค่าพารามิเตอร์ที่ใช้ในการหาค่าที่เหมาะสม]
+
+%ในการทดลองนี้ได้กำหนดขอบเขตของค่าพารามิเตอร์ไว้ดังสมการ~\eqref{eq:bounds}
+
+%\begin{equation}
+%  \mathbf{x}_{min} \leq \mathbf{x} \leq \mathbf{x}_{max}
+%  \label{eq:bounds}
+%\end{equation}
+
+%%------------------------------------------------------------------
+\section{ฟังก์ชันวัตถุประสงค์}
+
+\noindent\hspace{\parindent}%
+อธิบายฟังก์ชันวัตถุประสงค์ที่ใช้ในการประเมินผลลัพธ์
+
+เกณฑ์ดัชนีสมรรถนะที่ใช้ในการหาค่าที่เหมาะสม:
+
+%\begin{equation}
+%  \text{ITAE} = \int_{0}^{t_{sim}} t \left| \Delta f_i + \Delta P_{tie,i} \right| dt
+%  \label{eq:itae}
+%\end{equation}
+
+%\begin{equation}
+%  \text{ITSE} = \int_{0}^{t_{sim}} t \left[ (\Delta f_i)^2 + (\Delta P_{tie,i})^2 \right] dt
+%  \label{eq:itse}
+%\end{equation}
+
+%\begin{equation}
+%  \text{IAE} = \int_{0}^{t_{sim}} \left| \Delta f_i + \Delta P_{tie,i} \right| dt
+%  \label{eq:iae}
+%\end{equation}
+
+%\begin{equation}
+%  \text{ISE} = \int_{0}^{t_{sim}} \left[ (\Delta f_i)^2 + (\Delta P_{tie,i})^2 \right] dt
+%  \label{eq:ise}
+%\end{equation}
+
+%%------------------------------------------------------------------
+\section{สถานการณ์จำลอง}
+
+\noindent\hspace{\parindent}%
+[อธิบายสถานการณ์การจำลองที่ใช้ในการทดสอบ]
+
+การทดลองนี้แบ่งออกเป็น 2 กรณีศึกษา ดังนี้
+\begin{enumerate}
+  \item กรณีศึกษาที่ 1 อธิบายโหลดโปรไฟล์แบบที่ 1
+  \item กรณีศึกษาที่ 2 อธิบายโหลดโปรไฟล์แบบที่ 2
+\end{enumerate}
+
+%%------------------------------------------------------------------
+\section{การวิเคราะห์ผลลัพธ์}
+
+\noindent\hspace{\parindent}%
+[อธิบายวิธีการวิเคราะห์ผลลัพธ์และตัวชี้วัดที่ใช้ในการประเมิน]
+
+\begin{itemize}
+  \item \textbf{Maximum Overshoot}: ค่าความเบี่ยงเบนสูงสุดในทิศทางบวก
+  \item \textbf{Minimum Undershoot}: ค่าความเบี่ยงเบนต่ำสุดในทิศทางลบ
+  \item \textbf{Settling Time}: ระยะเวลาที่ระบบเข้าสู่สภาวะคงตัว
+  \item \textbf{Steady-State Error}: ความผิดพลาดในสภาวะคงตัว
+\end{itemize}
