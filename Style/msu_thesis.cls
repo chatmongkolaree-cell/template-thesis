@@ -723,70 +723,78 @@
 
 \newcommand{\makeabstract}{%
   \if@thai
-      \clearpage
-      \thispagestyle{frontmatter}
-      \phantomsection
-      \addcontentsline{toc}{chapter}{บทคัดย่อภาษาไทย}
+    \clearpage
+    \thispagestyle{frontmatter}
+    \phantomsection
+    \addcontentsline{toc}{chapter}{บทคัดย่อภาษาไทย}
 
-      \noindent
-      \begin{tabular}{@{}p{1.2in}p{\dimexpr\linewidth-1.2in-2\tabcolsep\relax}@{}}
-        {\bfseries ชื่อเรื่อง}    & \thesistitleTH \\
-        {\bfseries ผู้วิจัย}   & \authornameTH \\
-        {\bfseries อาจารย์ที่ปรึกษา} & \advisorFullTH 
-        \ifthenelse{\equal{\coOneadvisorFullTH}{}}{}{%
-          \\ & \coOneadvisorFullTH
-        }%
-        \ifthenelse{\equal{\coTwoadvisorFullTH}{}}{}{%
-          \\ & \coTwoadvisorFullTH
-        }%
-        \\
-        
-      \end{tabular}
+    \noindent
+    \begin{tabular}{@{}p{1.2in}p{\dimexpr\linewidth-1.2in-2\tabcolsep\relax}@{}}
+      {\bfseries ชื่อเรื่อง}    & \thesistitleTH \\
+      {\bfseries ผู้วิจัย}   & \authornameTH \\
+      {\bfseries อาจารย์ที่ปรึกษา} & \advisorFullTH 
+      \ifthenelse{\equal{\coOneadvisorFullTH}{}}{}{%
+        \\ & \coOneadvisorFullTH
+      }%
+      \ifthenelse{\equal{\coTwoadvisorFullTH}{}}{}{%
+        \\ & \coTwoadvisorFullTH
+      }%
+      \\
+      
+    \end{tabular}
 
-      \noindent
-      \begin{tabular}{@{}p{1.2in}p{1.6in}p{0.6in}p{\dimexpr\linewidth-1.2in-1.6in-0.6in-6\tabcolsep\relax}@{}}
-        {\bfseries ปริญญา}     & \degreeTH & {\bfseries สาขา} & \FieldOfStudyTH \\
-        {\bfseries มหาวิทยาลัย} & มหาวิทยาลัยมหาสารคาม & {\bfseries ปีที่พิมพ์} & \yearTH \\
-      \end{tabular}
+    \noindent
+    \begin{tabular}{@{}p{1.2in}p{1.6in}p{0.6in}p{\dimexpr\linewidth-1.2in-1.6in-0.6in-6\tabcolsep\relax}@{}}
+      {\bfseries ปริญญา}     & \degreeTH & {\bfseries สาขา} & \FieldOfStudyTH \\
+      {\bfseries มหาวิทยาลัย} & มหาวิทยาลัยมหาสารคาม & {\bfseries ปีที่พิมพ์} & \yearTH \\
+    \end{tabular}
 
-      \vspace{0.5cm}
-      \begin{center}{\bfseries บทคัดย่อ}\end{center}
+    \vspace{0.5cm}
+    \begin{center}{\bfseries บทคัดย่อ}\end{center}
 
-      {\MSUindent\normalsize\abstractTH}
+    {\MSUindent\normalsize\abstractTH}
 
-      \vspace{0.5cm}
-      \noindent\textbf{คำสำคัญ}: \keywordTH
+    \vspace{0.5cm}
+    \noindent\textbf{คำสำคัญ}: \keywordTH
   \fi
 
-  \clearpage
-  \thispagestyle{frontmatter}
-  \phantomsection
-  \if@thai
-    \addcontentsline{toc}{chapter}{บทคัดย่อภาษาอังกฤษ}
-  \else
-    \addcontentsline{toc}{chapter}{\MakeUppercase{Abstract}}
-  \fi
+    \clearpage
+    \thispagestyle{frontmatter}
+    \phantomsection
+    \if@thai
+      \addcontentsline{toc}{chapter}{บทคัดย่อภาษาอังกฤษ}
+    \else
+      \addcontentsline{toc}{chapter}{\MakeUppercase{Abstract}}
+    \fi
 
-  \noindent
-  \begin{tabular}{@{}p{1.2in}p{\dimexpr\linewidth-1.2in-2\tabcolsep\relax}@{}}
-    {\bfseries TITLE}    & \thesistitleEN \\
-    {\bfseries AUTHOR}   & \authornameEN \\
-    {\bfseries ADVISORS} & \advisorFullEN \\
-  \end{tabular}
+    \noindent
+    \begin{tabular}{@{}p{1.2in}p{\dimexpr\linewidth-1.2in-2\tabcolsep\relax}@{}}
+      {\bfseries TITLE}    & \thesistitleEN \\
+      {\bfseries AUTHOR}   & \authornameEN \\
+      {\bfseries ADVISORS} & \advisorFullEN  
+      \ifthenelse{\equal{\coOneadvisorFullEN}{}}{}{%
+        \\ & \coOneadvisorFullEN
+      }%
+      \ifthenelse{\equal{\coTwoadvisorFullEN}{}}{}{%
+        \\ & \coTwoadvisorFullEN
+      }%
+      \\
+    \end{tabular}
 
-  \noindent
-  \begin{tabular}{@{}p{1.2in}p{1.6in}p{0.7in}p{\dimexpr\linewidth-1.2in-1.6in-0.7in-6\tabcolsep\relax}@{}}
-    {\bfseries DEGREE}     & \degreeEN & {\bfseries MAJOR} & \FieldOfStudyEN \\
-    {\bfseries UNIVERSITY} & Mahasarakham \newline University & {\bfseries YEAR} & \yearEN \\
-  \end{tabular}
+    \noindent
+    \begin{tabular}{@{}p{1.2in}p{1.6in}p{0.7in}p{\dimexpr\linewidth-1.2in-1.6in-0.7in-6\tabcolsep\relax}@{}}
+      {\bfseries DEGREE}     & \degreeEN & {\bfseries MAJOR} & \FieldOfStudyEN \\
+      {\bfseries UNIVERSITY} & Mahasarakham \newline University & {\bfseries YEAR} & \yearEN \\
+    \end{tabular}
 
-  \vspace{0.5cm}
-  \begin{center}{\bfseries ABSTRACT}\end{center}
+    \vspace{0.5cm}
+    \begin{center}{\bfseries ABSTRACT}\end{center}
 
-  {\MSUindent\normalsize\abstractEN}
+    {\MSUindent\normalsize\abstractEN}
 
-  \vspace{0.5cm}
-  \noindent\textbf{Keywords}: \keywordEN
+    \vspace{0.5cm}
+    \noindent\textbf{Keywords}: \keywordEN
+  
 }
 
 \newcommand{\makeacknowledgement}{
